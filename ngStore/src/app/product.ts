@@ -7,7 +7,7 @@ export class Product {
     
 }
 
-export const productList :Product[] = [
+export const productDataSource :Product[] = [
     {
         id:1,
         name:"Pencil",
