@@ -72,6 +72,39 @@ After deleting the default generated code, lets add a html element to our compon
 
 > ``<p>My Store</p>``
 
+You'll see that instead of the angular default page, we are given the page with our html element
+
+![first change](./assets/firstchange.png)
+
+something you'll notice is that within this app folder, there are quite a few different files named 
+``app.component.(ts/css/html/spec.ts)``
+
+those files correspond to the associated css and typescript files for the app component. 
+**Note: we will not be touching the .spec.ts files in this tutorial, please make sure to edit only the .ts files** 
+
+Go to the ``app.component.ts`` file.
+
+![appcomponenttsinit](./assets/appcomponenttsinit.png )
+
+change the variable named ``title`` 's value to be ``TP Store``
+
+return to your ``index.html``. Now we're going to create a one way binding to show the data from our ``Typescript`` file.
+
+Replace ``My Store`` with ``{{title}}``. What we're doing here is creating a binding between our typescript and html. Angular looks for the variable title and displays its interpretation within those double braces. As a result, your webpage should now look like 
+
+![tpstore](./assets/tpstore.png)
+
+Taking that a step further, angular interprets the expression within those braces as javascript. That means you can manipulate the data even further if necessary for example, in our braces we can change 
+``title`` to ``title.toUpperCase()``
+
+![toupper](./assets/toupper.png)
+
+There are a few ways to bind data in angular to read more about this topic, you can read about binding syntax [here](https://angular.io/guide/binding-syntax)
+
+
+[move on to building our store](./buildingStore.md)
+
+
 
 
 

@@ -1,2 +1,2 @@
 # classwork.angular.store
-[markdown lesson for angular store](./ngLesson.md)
+[markdown lesson for angular store](./gettingStarted.md)
