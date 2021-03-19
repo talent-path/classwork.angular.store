@@ -102,7 +102,7 @@ Taking that a step further, angular interprets the expression within those brace
 There are a few ways to bind data in angular to read more about this topic, you can read about binding syntax [here](https://angular.io/guide/binding-syntax)
 
 
-[move on to building our store](./buildingStore.md)
+[move on to starting to build our store](./storeData.md)
 
 
 

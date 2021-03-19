@@ -1,61 +1,4 @@
-## Store Products ##
 
-So the first thing for our store is to have products. In this demonstration we'll be storing our products in a Typescript file. Create a new file in your ``app`` folder named ``product.ts``. In here we will export a class named product. Each product will have an id, name, category and an optional description.
-
-```Typescript
-export class Product {
-    id:number;
-    name:string;
-    price:number;
-    category:string;
-    description?:string;
-    
-}
-```
-
-In addition, we will  export an array of products to be used within our application
-
-```Typescript
-export const productList :Product[] = [
-    {
-        id:1,
-        name:"Pencil",
-        price:1.50,
-        category:"Office Supplies",
-        description:"graphite surrounded by wood"
-    },
-    {
-        id:2,
-        name:"Mechanical Pencil",
-        price:2.00,
-        category:"Office Supplies",
-        description:"graphite surrounded by plastic"
-    },
-    {
-        id:3,
-        name:"Pen",
-        price:2.00,
-        category:"Office Supplies",
-        description:"plastic surrounding ink"
-    },
-    {
-        id:4,
-        name:"TalentPath Studio",
-        price:100.00,
-        category:"Software",
-        description:"The best code editor"
-    },
-    {
-        id:5,
-        name:"Compass",
-        price:95.00,
-        category:"Software",
-        description:"The best learning management software not on the market!"
-    }
-];
-```
-
-Now that we've made some test data to develop with, we can start displaying our products in our store.
 
 ## Generating our First Component ##
 
@@ -68,7 +11,7 @@ This is just to structure our project. The file structure will vary based on sca
 
 * ``ng generate component components/productDisplay``
 
-This will generate a component named all-products in your components folder. Think of components as the building blocks of a website. Each component will represent a piece of your site. In addition, components can be nested and contained within other components.
+This will generate a component named product-display in your components folder. Think of components as the building blocks of a website. Each component will represent a piece of your site. In addition, components can be nested and contained within other components.
 
 * Navigate to the all-products.component.ts file
 
@@ -121,12 +64,12 @@ as you can see, theres some pregenerated text showing that ``product-display`` w
 
 Now that we can see our new component, lets build it into something that will display our products. First off, lets bring in a product from our ``productList`` . 
 
-* In your ``product-display.component.ts`` declare a property named product of type Product and in ``ngOnInit()`` set the property to the first product in our productList array. Make sure to import both Product and productlist from our product file!
+* In your ``product-display.component.ts`` declare a property named ``product`` of type ``Product`` and in ``ngOnInit()`` set the property to a new Product.
 
 
 ```Typescript
 import { Component, OnInit } from '@angular/core';
-import { Product, productList } from 'src/app/product';
+import { Product } from 'src/app/product';
 
 @Component({
   selector: 'app-product-display',
@@ -134,14 +77,21 @@ import { Product, productList } from 'src/app/product';
   styleUrls: ['./product-display.component.css']
 })
 export class ProductDisplayComponent implements OnInit {
-  product : Product;
+  product: Product;
   constructor() { }
 
   ngOnInit(): void {
-    this.product = productList[0];
+    this.product = {
+      id: 1,
+      name: "Pencil",
+      price: 1.50,
+      category: "Office Supplies",
+      description: "graphite surrounded by wood"
+    };
   }
 
 }
+
 ```
 
 now that our component has a product to display, lets represent it in the html. 
@@ -178,12 +128,7 @@ h3 {
 
 One of the really nice things about Angular is that these style sheets will only affect the component they are associated with. That means these stylings we created for div will only apply to the divs inside this specific component. For global styles, you can add them in ``styles.css`` outside of the app folder.
 
+![styled first component](./assets/styledfirstcomponent.png)
 
 
-
-
-[read more about life cycle hooks here](https://angular.io/guide/lifecycle-hooks)
-
-
-
-[previous page: getting started](gettingStarted.md) || [next: ]()
+[previous page: getting started](./gettingStarted.md) || [next:  product container component](./containerComponent.md)
