@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CartItem } from 'src/app/cartItem';
 import { Product, productDataSource } from 'src/app/product';
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-all-products',
@@ -10,17 +11,15 @@ import { Product, productDataSource } from 'src/app/product';
 export class AllProductsComponent implements OnInit {
   products: Product[];
   cart: CartItem[];
-  constructor() { }
+  constructor(private cartService: CartService) { }
 
   ngOnInit(): void {
     this.products = [...productDataSource];
-    this.cart = [];
+    this.cart = this.cartService.getCart();
   }
-  addToCart(id):void {
-    console.log(id);
-    let toAdd = this.cart.find(item => item.itemId === id);
-    if(toAdd) toAdd.quantity++;
-    else this.cart.push({itemId:id, quantity:1})
+  addToCart(id:number):void {
+    this.cartService.addToCart(id);
   }
+
 
 }

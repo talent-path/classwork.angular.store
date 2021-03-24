@@ -1,0 +1,11 @@
+<div class="container">
+    <div class="cartItem" *ngFor="let cartItem of cart">
+        <div class="itemInfo">
+            <span class="itemId">{{cartItem.itemId}}</span>
+            <br>
+            <span class="itemQuantity">{{cartItem.quantity}}</span>
+        </div>
+        <button class="add">+</button>
+        <button class="remove">-</button>
+    </div>
+</div>
