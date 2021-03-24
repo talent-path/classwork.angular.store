@@ -143,6 +143,12 @@ Now, lets add functionality that creates a cart item and adds that increments th
   }
 ```
 
-Now, pressing the add to cart button on our website should add 
+Now, pressing the add to cart button on our website should add entries at the top of our all-product's component with the item id and quantity.
 
+![cartupdate](./assets/updatingcart.png)
+
+
+In the next session we will demonstrate how to use services in order to pass data from un-linked components.
+
+[Previous: Container Component](./containerComponent.md) || [Next: Cart Service](./services.md)
 
