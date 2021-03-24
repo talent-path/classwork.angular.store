@@ -118,8 +118,29 @@ export class ProductDisplayComponent implements OnInit {
 Your website should now look like this:
 ![data binded](./assets/dataBinded1.png)
 
-finally lets add some light styling to center and add some uniformity to the components in ``all-products.component.css``
-
+finally, lets add a static width to the inner component to create uniformity between the components
 
 ```css
+product-display.component.css
+div {
+    background-color: beige;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+}
+
+h3 {
+    margin: 5px;
+}
+
+all-products.component.css
+
 ```
+
+and now your site should look like this
+
+![formatted](./assets/innerformat.png)
+
+
+[previous: first component](./firstComponent.md) || [next: Cart](./cart.md)

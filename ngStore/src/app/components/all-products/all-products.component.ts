@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CartItem } from 'src/app/cartItem';
 import { Product, productDataSource } from 'src/app/product';
 
 @Component({
@@ -8,10 +9,18 @@ import { Product, productDataSource } from 'src/app/product';
 })
 export class AllProductsComponent implements OnInit {
   products: Product[];
+  cart: CartItem[];
   constructor() { }
 
   ngOnInit(): void {
     this.products = [...productDataSource];
+    this.cart = [];
+  }
+  addToCart(id):void {
+    console.log(id);
+    let toAdd = this.cart.find(item => item.itemId === id);
+    if(toAdd) toAdd.quantity++;
+    else this.cart.push({itemId:id, quantity:1})
   }
 
 }

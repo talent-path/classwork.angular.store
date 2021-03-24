@@ -1,4 +1,6 @@
 <div>
-    <p>all-products works!</p>
-    <app-product-display *ngFor="let product of products" [product]="product"></app-product-display>
+    <div id="cartDisplay" *ngFor="let item of cart">
+        <span>item:{{item.itemId}} quantity:{{item.quantity}}</span>
+    </div>
+    <app-product-display (cartEmitter)="addToCart($event)" *ngFor="let product of products" [product]="product"></app-product-display>
 </div>
