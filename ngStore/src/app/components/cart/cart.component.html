@@ -1,7 +1,7 @@
 <div class="container">
     <div class="cartItem" *ngFor="let cartItem of cart">
         <div class="itemInfo">
-            <span class="itemId">Item Id: {{cartItem.itemId}}</span>
+            <span class="itemId">{{getProductName(cartItem)}}</span>
 
             <span class="itemQuantity">Item Quantity: {{cartItem.quantity}}</span>
         </div>

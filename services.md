@@ -296,7 +296,7 @@ finally, we're left with a page that looks like this:
 
 
 
-[next: refactoring to a product service](./productService.png)
+[next: refactoring to a product service](./productService.md)
 
 
 

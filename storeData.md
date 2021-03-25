@@ -16,7 +16,7 @@ export class Product {
 In addition, we will  export an array of products to be used within our application
 
 ```Typescript
-export const productList :Product[] = [
+export var productList :Product[] = [
     {
         id:1,
         name:"Pencil",
