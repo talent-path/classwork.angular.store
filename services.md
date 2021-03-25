@@ -50,7 +50,7 @@ export class CartService {
   removeItem(id:number): void{
     let toRemove = this.cart.find(item => item.itemId === id);
     if(!toRemove) return;
-    if(toRemove.quantity <2) this.cart = this.cart.filter(item => item.itemId!==id);
+    if(toRemove.quantity <2) this.cart.splice(this.cart.indexOf(toRemove),1);
     else toRemove.quantity--;
   }
   getCart():CartItem[]{
@@ -296,7 +296,7 @@ finally, we're left with a page that looks like this:
 
 
 
-[next: refactoring to a product service](./productService.md)
+[previous: container component](./containerComponent.md) || [next: refactoring to a product service](./productService.md)
 
 
 

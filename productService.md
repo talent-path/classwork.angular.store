@@ -170,9 +170,13 @@ Something else important to note about Observables is their asynchronous nature.
 
 Although not much has changed visually here, I do want to show that the site remains fully functional even when serving asynchronous data.
 
+[read more about asynchronous programming](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous)
+
+
 ![with observable](./assets/prodServiceFinished.png)
 
 
-[read more about asynchronous programming](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous)
 
+
+[previous: cart service](./services.md) || [next: routing](./routing.md)
 
