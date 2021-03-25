@@ -10,12 +10,12 @@ import { CartService } from 'src/app/services/cart.service';
 })
 export class AllProductsComponent implements OnInit {
   products: Product[];
-  cart: CartItem[];
+  
   constructor(private cartService: CartService) { }
 
   ngOnInit(): void {
     this.products = [...productDataSource];
-    this.cart = this.cartService.getCart();
+    
   }
   addToCart(id:number):void {
     this.cartService.addToCart(id);

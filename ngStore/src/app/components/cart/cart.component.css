@@ -1,0 +1,23 @@
+.container {
+    border: blue 5px solid;
+    background-color: orange;
+}
+
+.cartItem {
+    background-color: beige;
+    margin: 2px;
+}
+
+.itemInfo {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 80%;
+}
+
+.buttons {
+    width: 20%;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-around;
+}

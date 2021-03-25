@@ -1,11 +1,17 @@
 <div class="container">
     <div class="cartItem" *ngFor="let cartItem of cart">
         <div class="itemInfo">
-            <span class="itemId">{{cartItem.itemId}}</span>
-            <br>
-            <span class="itemQuantity">{{cartItem.quantity}}</span>
+            <span class="itemId">Item Id: {{cartItem.itemId}}</span>
+
+            <span class="itemQuantity">Item Quantity: {{cartItem.quantity}}</span>
         </div>
-        <button class="add">+</button>
-        <button class="remove">-</button>
+        <div class="buttons">
+            <button class="add" (click)="addToCart(cartItem)">+</button>
+            <button class="remove" (click)="removeFromCart(cartItem)">-</button>
+        </div>
+
+    </div>
+    <div *ngIf="cart.length === 0" class="cartItem">
+        <span>cart is empty</span>
     </div>
 </div>
