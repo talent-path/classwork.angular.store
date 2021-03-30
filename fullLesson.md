@@ -1119,7 +1119,7 @@ Although not much has changed visually here, I do want to show that the site rem
 ![with observable](./assets/prodServiceFinished.png)
 
 
-# Introduction #
+# Routing #
 
 Up until this point, most of the instruction in this code along has been focused towards making individual parts of our website to work. In this section, we'll be taking a step back and focusing on the "bigger picture" of building a website
 
