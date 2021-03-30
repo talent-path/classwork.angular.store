@@ -1,0 +1,20 @@
+.nav {
+    text-align: center;
+    margin: 1%;
+    background-color: rgb(183, 213, 238);
+    padding: 1%;
+    border-radius: 5px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+}
+
+.welcome {
+    text-align: center;
+}
+
+p {
+    font-size: 35px;
+}

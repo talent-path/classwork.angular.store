@@ -4,10 +4,10 @@ import { CheckoutComponent } from './components/pages/checkout/checkout.componen
 import { HomeComponent } from './components/pages/home/home.component';
 import { ShopComponent } from './components/pages/shop/shop.component';
 
-const routes: Routes = [{path:'',component:HomeComponent},
-                        {path:'shop', component:ShopComponent},
-                        {path:'checkout', component:CheckoutComponent}
-                ];
+const routes: Routes = [{ path: '', component: HomeComponent },
+{ path: 'shop', component: ShopComponent },
+{ path: 'checkout', component: CheckoutComponent }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

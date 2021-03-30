@@ -291,7 +291,7 @@ export class AllProductsComponent implements OnInit {
 ```
 
 finally, we're left with a page that looks like this:
-![](./assets/2columnpage.png)
+![page with cart formatted](./assets/2columnpage.png)
 
 
 

@@ -1,1 +1,14 @@
-<p>checkout works!</p>
+<div class="page">
+    <div class="info">
+        <label for="">Name</label>
+        <input #name type="text">
+        <label for="">address</label>
+        <input #address type="text">
+        <label for="">email</label>
+        <input #email type="email">
+        <button (click)="submit(name.value,address.value,email.value)">Submit</button>
+    </div>
+    <div class="cart">
+        <app-cart></app-cart>
+    </div>
+</div>
