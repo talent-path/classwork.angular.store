@@ -386,6 +386,7 @@ div {
 }
 ```
 the end result should look like this
+
 ![styled container](./assets/containerstyled.png)
 
 
