@@ -585,7 +585,7 @@ this Event Emitter will the be the property that outputs up to our parent compon
 * Create the method AddToCart() that will use the emitter to emit data about what item to add to our cart.
 
 ```Typescript
-xport class ProductDisplayComponent implements OnInit {
+export class ProductDisplayComponent implements OnInit {
   @Input() product: Product;
   @Output() cartEmitter: EventEmitter<any> = new EventEmitter();
   constructor() { }
